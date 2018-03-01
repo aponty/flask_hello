@@ -14,8 +14,9 @@ RUN pip install flask
 RUN mkdir app
 WORKDIR /app
 
-ADD https://api.github.com/repos/aponty/flask_hello/compare/master...HEAD /dev/null
+ADD http://numbersapi.com/random/date /dev/null
 RUN git clone https://mattiebot:tac0tuesday@github.com/aponty/flask_hello
+
 RUN cp -R flask_hello/* .
 RUN rm -r flask_hello/
 EXPOSE 5000
